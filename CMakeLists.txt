@@ -13,5 +13,6 @@ add_executable(skip_amp_test skip_amp_test.c)
 
 enable_testing()
 
-add_test(NAME SkipAmpRuns COMMAND skip_amp_test)
-add_test(NAME SkipAmp     COMMAND skip_amp_test year=2020&month=02 rc:1,offset:9)
+add_test(NAME SkipAmp0 COMMAND skip_amp_test)
+add_test(NAME SkipAmp1 COMMAND skip_amp_test year=2020&month=02 rc:1,offset:9)
+add_test(NAME SkipAmp2 COMMAND skip_amp_test year=2020          rc:0,offset:9)
