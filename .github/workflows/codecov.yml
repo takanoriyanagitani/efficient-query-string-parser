@@ -9,9 +9,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+    - name: cmake
+      run:  cmake -D CMAKE_BUILD_TYPE=Debug .
+    - name: build
+      run:  cmake --build .
+    - name: test
+      run:  ctest
+    - name: gcov
+      run:  gcov CMakeFiles/skip_amp_test.dir/skip_amp_test.c.gcda
+    - name: Codecov
+      uses: codecov/codecov-action@v1.0.5
+      with:
+        token: 37cf2e5f-e870-432d-98f6-0067caed4a04
