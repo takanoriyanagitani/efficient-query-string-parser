@@ -15,8 +15,10 @@ jobs:
       run:  cmake --build .
     - name: test
       run:  ctest
-    - name: gcov
+    - name: gcov skip_amp
       run:  gcov CMakeFiles/skip_amp_test.dir/skip_amp_test.c.gcda
+    - name: gcov skip_eq
+      run:  gcov CMakeFiles/skip_eq_test.dir/skip_eq_test.c.gcda
     - name: Codecov
       uses: codecov/codecov-action@v1.0.5
       with:

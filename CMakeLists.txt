@@ -10,9 +10,14 @@ SET(CMAKE_C_FLAGS_DEBUG   "-O0 -g -coverage")
 SET(CMAKE_C_FLAGS_RELEASE -O3)
 
 add_executable(skip_amp_test skip_amp_test.c)
+add_executable(skip_eq_test  skip_eq_test.c)
 
 enable_testing()
 
 add_test(NAME SkipAmp0 COMMAND skip_amp_test)
 add_test(NAME SkipAmp1 COMMAND skip_amp_test year=2020&month=02 rc:1,offset:9)
 add_test(NAME SkipAmp2 COMMAND skip_amp_test year=2020          rc:0,offset:9)
+
+add_test(NAME SkipEq0  COMMAND skip_eq_test)
+add_test(NAME SkipEq1  COMMAND skip_eq_test year=2020 rc:1,offset:4)
+add_test(NAME SkipEq2  COMMAND skip_eq_test year      rc:0,offset:4)
