@@ -1,4 +1,4 @@
-name: macos-10.15
+name: macOS Catalina 10.15
 
 on: [push]
 
