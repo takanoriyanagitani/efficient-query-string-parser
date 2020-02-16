@@ -28,3 +28,4 @@ add_test(NAME GetValueC1 COMMAND get_value_c_test a alarms=634&time=3    rc:1,of
 add_test(NAME GetValueC2 COMMAND get_value_c_test t alarms=634&time=3776 rc:1,offset:20,size:4,val:3776)
 add_test(NAME GetValueC3 COMMAND get_value_c_test m alarms=634&time=3776 rc:0,offset:20,size:0,val:)
 add_test(NAME GetValueC4 COMMAND get_value_c_test m ""                   rc:0,offset:0,size:0,val:)
+add_test(NAME GetValueC5 COMMAND get_value_c_test t alarms=634           rc:0,offset:10,size:0,val:)
