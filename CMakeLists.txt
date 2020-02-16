@@ -32,3 +32,5 @@ add_test(NAME GetValueC5 COMMAND get_value_c_test t alarms=634           rc:0,of
 add_test(NAME GetValueC6 COMMAND get_value_c_test t alarms=              rc:0,offset:7,size:0,val:)
 add_test(NAME GetValueC7 COMMAND get_value_c_test t t                    rc:0,offset:1,size:0,val:)
 add_test(NAME GetValueC8 COMMAND get_value_c_test t t=                   rc:1,offset:2,size:0,val:)
+add_test(NAME GetValueC9 COMMAND get_value_c_test t a=                   rc:0,offset:2,size:0,val:)
+add_test(NAME GetValueCa COMMAND get_value_c_test t a=&                  rc:0,offset:3,size:0,val:)
