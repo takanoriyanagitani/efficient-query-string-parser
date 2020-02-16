@@ -1,0 +1,17 @@
+name: ubuntu 18.04
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-18.04
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: cmake
+      run:  cmake .
+    - name: build
+      run:  cmake --build .
+    - name: ctest
+      run:  ctest

@@ -1,0 +1,17 @@
+name: macos-10.15
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: macos-10.15
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: cmake
+      run:  cmake .
+    - name: build
+      run:  cmake --build .
+    - name: ctest
+      run:  ctest
